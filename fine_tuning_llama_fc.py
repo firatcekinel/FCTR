@@ -127,9 +127,6 @@ OUTPUT_DIR = "output/" + DATA + "_experiments_" + MODEL_NAME.split("/")[-1] + PR
 print("Input args: ", args)
 print("output_dir=" + OUTPUT_DIR)
 
-wandb.login(key=args.wandb_key)
-wandb.init(project=args.wandb_project)
-
 #### DATA
 if DATA.startswith("fctr"): # fctr500 or fctr1000
     DEFAULT_SYSTEM_PROMPT = """Is the following statement in Turkish true or false? Answer as either \"doğru\" or \"yanlış\" """.strip()
@@ -228,6 +225,9 @@ model.config.use_cache = False
 model.config.quantization_config.to_dict()
 
 if not SKIP_TRAIN:
+    wandb.login(key=args.wandb_key)
+    wandb.init(project=args.wandb_project)
+    
     lora_r = 16
     lora_alpha = 64
     lora_dropout = 0.1
