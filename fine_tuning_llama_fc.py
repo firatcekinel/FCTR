@@ -355,7 +355,6 @@ for data_point in dataset["test"]:
 test_df = pd.DataFrame(examples)
 
 if SKIP_TRAIN:
-    model, tokenizer = create_model_and_tokenizer()
     model = PeftModel.from_pretrained(model, OUTPUT_DIR)
     model = model.merge_and_unload()
     model.pad_token_id = tokenizer.pad_token_id
