@@ -28,6 +28,7 @@ To fine-tune the Llama models, you should provide the following arguments:
 ```
 python fine_tuning_llama_fc.py \
 --model_name "meta-llama/Llama-2-7b-hf" \
+--access_token "HF ACCESS TOKEN" \
 --data "fctr500" \
 --batch 4 \ 
 --epoch 3 \ 
