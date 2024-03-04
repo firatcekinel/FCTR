@@ -60,5 +60,12 @@ python fine_tuning_llama_fc.py \
 ## Citation
 Please cite the paper as follows if you find the study useful.
 ```
-
+@misc{cekinel2024crosslingual,
+      title={Cross-Lingual Learning vs. Low-Resource Fine-Tuning: A Case Study with Fact-Checking in Turkish}, 
+      author={Recep Firat Cekinel and Pinar Karagoz and Cagri Coltekin},
+      year={2024},
+      eprint={2403.00411},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
